@@ -1,0 +1,35 @@
+<ion-view view-title="Login" align-title="left">
+  <ion-content style="background: url(img/login.jpg) center; background-size: cover;">
+    <div class="hero no-header flat">
+      <div class="content">
+        <div class="app-icon"></div>
+        <h1 class="energized">Hi Bike</h1>
+      </div>
+    </div>
+
+    <form ng-submit="login()">
+      <div class="list padding">
+        <label class="item item-input item-floating-label">
+          <span class="input-label"><h2 class="dark">Correo:</h2></span>
+          <input type="text" placeholder="Correo" ng-model="email">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label"><h2 class="dark">Contraseña:</h2></span>
+          <input type="password" placeholder="Contraseña" ng-model="password">
+        </label>
+      </div>
+      <div class="padding">
+        <button type="submit" class="button button-block button-balanced ink" ng-disabled="!email || !password">Ingresar</button>
+        <button ng-click="showLogin()" class="button button-block button-assertive ink">Registro</button>
+      </div>
+    </form>
+  </ion-content>
+
+  <ion-footer-bar align-title="left" class="bar-stable">
+    <div class="button-bar">
+      <button class="button button-small icon ion-social-twitter button-calm"></button>
+      <button class="button button-small icon ion-social-googleplus button-assertive"></button>
+      <button class="button button-small icon ion-social-facebook button-positive"></button>            
+    </div>
+  </ion-footer-bar>
+</ion-view>

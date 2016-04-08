@@ -1,0 +1,76 @@
+<ion-view view-title="Registro">
+
+  <ion-header-bar>
+    <h1 class="title">Registro</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Cerrar X</button>
+    </div>
+  </ion-header-bar>
+
+  <ion-content class="padding">
+
+    <form ng-submit="createUser()">
+      <div class="list">
+        
+        <h6 class="assertive">{{messages.name[0]}}</h6>
+        <label class="item item-input">
+          <span class="input-label">Nombre:</span>
+          <input type="text" placeholder="Tu nombre" ng-model="name">
+        </label>
+        
+        <h6 class="assertive">{{messages.username[0]}}</h6>
+        <label class="item item-input">
+          <span class="input-label">Username:</span>
+          <input type="text" placeholder="Tu nombre de usuario" ng-model="username">
+        </label>
+        
+        <h6 class="assertive">{{messages.email[0]}}</h6>
+        <label class="item item-input">
+          <span class="input-label">Correo:</span>
+          <input type="text" placeholder="Tu correo" ng-model="email">
+        </label>
+
+        <h6 class="assertive">{{messages.gender[0]}}</h6>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Hombre / Mujer:
+          </div>
+          <select ng-model="gender">
+            <option value="0">Mujer</option>
+            <option value="1">Hombre</option>
+          </select>
+        </label>
+        
+        <h6 class="assertive">{{messages.bike_type[0]}}</h6>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Perfil:
+          </div>
+          <select ng-model="id_profile">
+            <option ng-repeat="profile in profiles" value="{{profile.id}}">{{profile.name}}</option>
+          </select>
+        </label>
+
+        <h6 class="assertive">{{messages.id_profile[0]}}</h6>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Tipo de bicicleta:
+          </div>
+          <select ng-model="bike_type">
+            <option ng-repeat="bike_type in bike_types" value="{{bike_type.id}}">{{bike_type.name}}</option>
+          </select>
+        </label>
+        
+        <h6 class="assertive">{{messages.password[0]}}</h2>
+        <label class="item item-input">
+          <span class="input-label">Contraseña:</span>
+          <input type="password" placeholder="Contraseña" ng-model="password">
+        </label>
+      </div>
+
+      <button class="button button-full button-balanced ink" type="submit">Guardar</button>
+
+    </form>
+
+  </ion-content>
+</ion-view">
